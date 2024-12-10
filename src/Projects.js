@@ -1,75 +1,36 @@
-// Projects.js
 import React from "react";
 import "./Projects.css";
-
-// Import images for your projects
-import steamDexImage from "./images/steam.png";
-import Roomie from "./images/LOGO.png";
-import PianoRing from "./images/PianoRing.png";
-import EMS from "./images/EMS.jpeg";
-import CoffeeBuddy from "./images/CoffeeBuddy.png";
-import Pico from "./images/pico.jpeg";
 
 const projects = [
   {
     id: 1,
-    title: "PianoRing",
+    title:
+      "Pharmacopeia Chatbot Using Retrieval-Augmented Generation (RAG) Summer 2024",
     description:
-      "A piano learning device that combines haptic feedback with key guidance projection to facilitate independent learning. It features gloves with vibratory motors and LED indicators that synchronize with corresponding piano keys, offering real-time tactile and visual guidance. Designed to enhance muscle memory and finger coordination.",
-    imageUrl: PianoRing,
-    projectUrl: "https://youtu.be/HajAyAW5QAY?si=LhELFyv5BmgTrqcb",
+      "Contributed to the development of the vector database of a chatbot framework that utilizes Retrieval-Augmented Generation (RAG) to extract and deliver relevant information from pharmacopeia sources.",
+    projectUrl: "",
   },
   {
     id: 2,
-    title: "Roomie",
+    title: "Lang ReCaptcha",
     description:
-      "A Roommate Matching mobile application, developed using Flutter and Firebase. The app aims to connect individuals looking for roommates by matching profiles based on shared preferences and habits.",
-    imageUrl: Roomie,
-    projectUrl:
-      "https://github.com/lwamzeche/Roommate_Matching?tab=readme-ov-file",
+      "Designed and implemented a custom ReCAPTCHA system to collect data for low-resource languages and authenticate user behavior, utilizing the KoBERT model for verifying user input and labeling data.",
+    projectUrl: "https://github.com/Akotet08/LangCaptcha/tree/main",
   },
   {
     id: 3,
-    title: "EMS for Touchscreens in VR",
+    title: "Fake Import Declaration Detection Competition",
     description:
-      "An individual research project aimed at overcoming the lack of haptic feedback in VR interactions using Electrical Muscle Stimulation (EMS). The work focuses on providing screen haptic feedback to improve the usability of virtual touchscreens in VR.",
-    imageUrl: EMS,
-    projectUrl:
-      "https://drive.google.com/file/d/1duBV3BXTQirWYDLYiGaUR7t_sfzKKJJ3/view?usp=sharing",
-  },
-  {
-    id: 4,
-    title: "Virtual Sensor",
-    description:
-      "Currently developing a system aimed at enabling real-time control of physical resistance values through a web interface. The project uses a Raspberry Pi Pico to bridge a web server with variable resistance hardware, allowing users to input desired resistance values via a web interface.",
-    imageUrl: Pico,
-    // Add projectUrl if available
-  },
-  {
-    id: 5,
-    title: "CoffeeBuddy",
-    description:
-      "A mobile app designed for tracking daily caffeine levels for individuals who depend on coffee for energy. The app calculates the amount of caffeine users should limit themselves to based on their weight, updating dynamically with user input and feedback.",
-    imageUrl: CoffeeBuddy,
-    projectUrl:
-      "https://www.figma.com/proto/mQYCu43StvpWWiq25stbrn/Intro-to-HCI-Project?page-id=575%3A1174&node-id=1113-2561&viewport=101%2C115%2C0.04&t=eVlmdJYjOotpU24r-1&scaling=scale-down&content-scaling=fixed&starting-point-node-id=1113%3A2561",
-  },
-  {
-    id: 6,
-    title: "Steam Dex",
-    description:
-      "A website that analyzes various indie games from Steam, providing details such as price, budget, revenue, review count, and tags. It enables users to search for games by name, price, revenue, and tags.",
-    imageUrl: steamDexImage,
-    projectUrl: "https://steam-dex.com/",
+      "Ranked 3rd out of 190+ participants in a Kaggle competition hosted by KAIST CS360 and the Korean Customs Service. Developed an advanced model ensemble and innovative data processing to detect fake import declarations",
+    projectUrl: "",
   },
 ];
 
 function Projects() {
   return (
     <div className="projects-container">
-      {/* <h1 className="projects-title">Projects</h1> */}
+      <h1 className="title">My Projects</h1>
       {projects.map((project) => (
-        // Wrap the contents of the project card in an anchor tag if projectUrl exists
         <a
           key={project.id}
           href={project.projectUrl ? project.projectUrl : "#"}
@@ -78,11 +39,6 @@ function Projects() {
           className="project-card"
         >
           <div className="project">
-            <img
-              src={project.imageUrl}
-              alt={project.title}
-              className="project-image"
-            />
             <div className="project-details">
               <h2 className="project-title">{project.title}</h2>
               <p className="project-description">{project.description}</p>

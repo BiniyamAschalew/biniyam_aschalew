@@ -8,14 +8,14 @@ import {
   useLocation,
 } from "react-router-dom";
 import About from "./About";
-import Note from "./Note";
+import Projects from "./Projects";
 import "./App.css";
-import LwamImage from "./images/Lwam7.jpeg";
+import BiniImage from "./images/Bini.jpeg";
 
 function Sidebar({ activeSection }) {
   return (
     <div className="sidebar">
-      <img src={LwamImage} alt="Lwam" className="profile-image" />
+      <img src={BiniImage} alt="Biniyam" className="profile-image" />
       <nav className="navigation">
         <Link
           to="/about#about-me"
@@ -24,22 +24,24 @@ function Sidebar({ activeSection }) {
           About me
         </Link>
         <Link
-          to="/about#projects"
+          to="/about#publication"
+          className={`nav-item ${
+            activeSection === "publication" ? "active" : ""
+          }`}
+        >
+          Publications
+        </Link>
+        <Link
+          to="/projects"
           className={`nav-item ${activeSection === "projects" ? "active" : ""}`}
         >
           Projects
         </Link>
-        <Link
-          to="/note"
-          className={`nav-item ${activeSection === "note" ? "active" : ""}`}
-        >
-          Note
-        </Link>
-        <a href="mailto:lwamzeche@kaist.ac.kr" className="nav-item">
+        <a href="mailto:binasc@kaist.ac.kr" className="nav-item">
           Email
         </a>
         <a
-          href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
+          href="https://drive.google.com/file/d/12fkeuSJV3-n_TWM5-yhD2Tdc27F3pMcc/view"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-item"
@@ -47,20 +49,12 @@ function Sidebar({ activeSection }) {
           CV
         </a>
         <a
-          href="https://x.com/lwam_zeche"
+          href="https://www.linkedin.com/in/biniyamaschalew/"
           target="_blank"
           rel="noopener noreferrer"
           className="nav-item"
         >
-          Twitter
-        </a>
-        <a
-          href="https://hci.social/@lwam"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="nav-item"
-        >
-          Mastodon
+          Linkedin
         </a>
       </nav>
     </div>
@@ -88,8 +82,8 @@ function AppContent() {
 
   useEffect(() => {
     const updateActiveSectionBasedOnRoute = () => {
-      if (location.pathname === "/note") {
-        setActiveSection("note");
+      if (location.pathname === "/projects") {
+        setActiveSection("projects");
       } else if (location.pathname === "/about") {
         const hash = location.hash || "#about-me";
         setActiveSection(hash.substring(1));
@@ -103,14 +97,14 @@ function AppContent() {
     const handleScroll = () => {
       if (location.pathname === "/about") {
         const aboutMe = document.getElementById("about-me");
-        const projects = document.getElementById("projects");
+        const publications = document.getElementById("publication");
 
-        if (aboutMe && projects) {
+        if (aboutMe && publications) {
           const aboutMeTop = aboutMe.getBoundingClientRect().top;
-          const projectsTop = projects.getBoundingClientRect().top;
+          const publicationsTop = publications.getBoundingClientRect().top;
 
-          if (projectsTop <= window.innerHeight / 2) {
-            setActiveSection("projects");
+          if (publicationsTop <= window.innerHeight / 2) {
+            setActiveSection("publication");
           } else if (aboutMeTop <= window.innerHeight / 2) {
             setActiveSection("about-me");
           }
@@ -133,7 +127,7 @@ function AppContent() {
         <Routes>
           <Route path="/" element={<Navigate to="/about" replace />} />
           <Route path="/about" element={<About />} />
-          <Route path="/note" element={<Note />} />
+          <Route path="/projects" element={<Projects />} />
           <Route path="*" element={<Navigate to="/about" replace />} />
         </Routes>
       </div>

@@ -1,73 +1,76 @@
 import React from "react";
-import Projects from "./Projects"; // Import the Projects component
+import Publications from "./Publications";
 import "./About.css";
 
 function About() {
   return (
     <div className="about-container">
-      {/* About Section */}
       <div id="about-me" className="about-content">
-        <h1 className="about-title">Lwam Zeche</h1>
+        <h1 className="about-title">Biniyam Aschalew</h1>
         <div className="about-text">
           <p>
-            Hey there, my name is Lwam Zemikael Araya. I am an undergraduate
-            student at KAIST, majoring in Computer Science with a minor in Brain
-            and Cognitive Sciences.
+            I am an undergraduate student at KAIST, majoring in Computer Science
+            with a minor in Industrial and Systems Engineering. My academic
+            journey has been enriched by diverse research experiences, including
+            work in areas like graph domain adaptation, multimodal language
+            models, and graph machine learning. I’ve had the privilege of
+            contributing to collaborative projects that have led to published
+            work and practical applications. With a genuine curiosity for
+            technology and its potential, I approach every challenge as an
+            opportunity to learn, grow, and make a meaningful impact.
           </p>
           <p>
-            I have gained industry experience through internships in website
-            development at{" "}
+            I have gained industry experience through internships in Machine
+            Learning at{" "}
             <a
-              href="https://www.sentience.rocks/#team"
+              href="https://www.bfactory.ai/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sentience
-            </a>{" "}
-            and game development using Unity at{" "}
-            <a
-              href="https://www.bastionrobotics.com/"
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              Bastion Robotics.
+              BFactory Inc.
             </a>
           </p>
           <p>
-            My research interests lie in Human-Computer Interaction (HCI),
-            Wearable devices, Haptics, and Neuroscience (NeuroHCI). I conducted
-            individual research aimed at overcoming the lack of haptic feedback
-            in VR interactions using Electrical Muscle Stimulation (EMS) under
+            My research interests lie in Out-of-distribution learning, Transfer
+            learning, domain adaptation, Representation Learning, NLP, LLM and
+            AI for HealthCare. I did research on LLM and domain adaptation under
             the guidance of Professor{" "}
             <a
-              href="https://cs.kaist.ac.kr/people/view?idx=372&kind=faculty&menu=172"
+              href="https://sites.google.com/site/wewantsj/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Geehyuk Lee.
+              Sung-Ju Lee.
+            </a>{" "}
+            at{" "}
+            <a
+              href="https://nmsl.kaist.ac.kr"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Networking and Mobile Systems Lab
             </a>
           </p>
           <p>
             Recently, I am doing a research internship at{" "}
             <a
-              href="https://make.kaist.ac.kr/about"
+              href="https://dai.kaist.ac.kr"
               target="_blank"
               rel="noopener noreferrer"
             >
-              KAIST Make Lab
+              KAIST Data AI Lab
             </a>
             , under the guidance of Professor{" "}
             <a
-              href="https://make.kaist.ac.kr/andrea"
+              href="https://jaeminyoo.github.io/"
               target="_blank"
               rel="noopener noreferrer"
             >
-              Andrea Bianchi
+              Jaemin Yoo
             </a>
-            . I am looking for PhD programs for Fall 2025.
           </p>
           <a
-            href="https://drive.google.com/file/d/18KPimD9wZ1QCPlOfkYX5vV38qcx0e9Yu/view?usp=sharing"
+            href="https://drive.google.com/file/d/12fkeuSJV3-n_TWM5-yhD2Tdc27F3pMcc/view"
             target="_blank"
             rel="noopener noreferrer"
             className="nav-item"
@@ -77,10 +80,10 @@ function About() {
         </div>
       </div>
 
-      {/* Projects Section */}
-      <div id="projects" className="projects-section">
-        <h1 className="projects-title">Projects</h1> {/* Add the title */}
-        <Projects />
+      {/* Publications Section */}
+      <div id="publication" className="projects-section">
+        <h1 className="projects-title">Publications</h1>
+        <Publications />
       </div>
     </div>
   );
