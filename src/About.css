@@ -8,7 +8,7 @@
 
 /* Sidebar Styling */
 .sidebar {
-  width: 250px; 
+  width: 250px;
   position: fixed;
   top: 0;
   left: 0;
@@ -18,7 +18,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); 
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
@@ -29,7 +29,7 @@
 }
 
 .profile-image {
-  width: 150px; 
+  width: 150px;
   height: 180px;
   border-radius: 50%; /* Makes the image circular */
   object-fit: cover;
@@ -58,7 +58,7 @@
 .about-content {
   margin-left: 270px;
   padding: 0px 30px; /* Top and horizontal padding */
-  max-width: 800px; 
+  max-width: 800px;
 }
 
 .about-title {
@@ -145,5 +145,8 @@
 
   .profile-image {
     display: none; /* Hide profile image on very small screens */
+  }
+  .projects-title {
+    margin-left: 0;
   }
 }
