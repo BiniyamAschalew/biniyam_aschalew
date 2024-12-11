@@ -16,8 +16,7 @@ const publications = [
       "Adapting Pre-Trained Sensing Models to End-Users via Self-Supervision Replay",
     description:
       "Contributed to research on a self-supervised meta-learning approach for cross-domain and user adaptability. Implemented state-of-the-art self-supervised baselines, conducted experiments, and performed a literature review.",
-    projectUrl:
-      "https://github.com/lwamzeche/Roommate_Matching?tab=readme-ov-file",
+    projectUrl: "https://arxiv.org/abs/2404.15305",
   },
   {
     id: 3,
