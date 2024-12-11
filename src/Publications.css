@@ -82,6 +82,9 @@
     flex-direction: column;
     gap: 40px;
     max-width: 100%;
-    //margin-left: 300px;
+    margin-left: 0;
+  }
+  .publication {
+    margin-left: 0;
   }
 }
