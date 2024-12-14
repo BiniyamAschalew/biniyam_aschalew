@@ -40,9 +40,9 @@ function About() {
               target="_blank"
               rel="noopener noreferrer"
             >
-              Sung-Ju Lee.
+              Sung-Ju Lee
             </a>{" "}
-            at{" "}
+             at{" "}
             <a
               href="https://nmsl.kaist.ac.kr"
               target="_blank"
@@ -50,7 +50,7 @@ function About() {
             >
               Networking and Mobile Systems Lab
             </a>
-            Currently, I am an undergraduate researcher at{" "}
+            . Currently, I am an undergraduate researcher at{" "}
             <a
               href="https://dai.kaist.ac.kr"
               target="_blank"
